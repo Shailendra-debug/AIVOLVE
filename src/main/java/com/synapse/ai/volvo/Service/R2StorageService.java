@@ -23,7 +23,7 @@ public class R2StorageService {
     @Value("${cloudflare.r2.public-url}")
     private String publicUrl;
 
-    public String upload(MultipartFile file,String folder) throws IOException {
+    public String upload(MultipartFile file, String folder) throws IOException {
 
         String fileName = UUID.randomUUID() + "_" + file.getOriginalFilename();
         String key = folder + "/" + fileName;
@@ -32,13 +32,17 @@ public class R2StorageService {
                 .bucket(bucket)
                 .key(key)
                 .contentType(file.getContentType())
+                .contentLength(file.getSize())
                 .build();
 
         s3Client.putObject(
                 request,
-                RequestBody.fromBytes(file.getBytes())
+                RequestBody.fromInputStream(
+                        file.getInputStream(),
+                        file.getSize()
+                )
         );
 
-        return publicUrl+"/"+key;
+        return publicUrl + "/" + key;
     }
 }
