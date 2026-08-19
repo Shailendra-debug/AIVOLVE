@@ -18,6 +18,7 @@ public class CorsConfig implements WebMvcConfigurer {
                         "http://127.0.0.1:5500",
                         "http://localhost:3000",
                         "http://localhost:5500",
+                        "https://ubiquitous-shortbread-e875ba.netlify.app",
                         "http://localhost:5501"
                 )
                 .allowedMethods(
