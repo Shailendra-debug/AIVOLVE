@@ -44,4 +44,8 @@ public class ProjectRequest {
 
     @Size(max = 1000, message = "ZIP file URL must not exceed 1000 characters")
     private String zipFileUrl;
+
+    private String email;
+
+    private String phoneNumber;
 }

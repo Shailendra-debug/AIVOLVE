@@ -34,6 +34,8 @@ public class ProjectServiceImpl implements ProjectService {
                 .liveUrl(request.getLiveUrl())
                 .checked(false)
                 .marks(0)
+                .email(request.getEmail())
+                .phoneNumber(request.getPhoneNumber())
                 .zipFileUrl(request.getZipFileUrl())
                 .build();
 
@@ -139,7 +141,10 @@ public class ProjectServiceImpl implements ProjectService {
                 .sec(project.getSec())
                 .themes(project.getThemes())
                 .description(project.getDescription())
+                .email(project.getEmail())
+                .phoneNumber(project.getPhoneNumber())
                 .liveUrl(project.getLiveUrl())
+                .marks(project.getMarks())
                 .checked(project.getChecked())
                 .zipFileUrl(project.getZipFileUrl())
                 .createdAt(project.getCreatedAt())

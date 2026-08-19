@@ -61,6 +61,13 @@ public class Project {
     @Builder.Default
     private Integer marks = 0;
 
+
+    //@Column(nullable = false)
+    private String email;
+
+    //@Column(nullable = false)
+    private String phoneNumber;
+
     @Column(name = "created_at", nullable = false, updatable = false)
     private LocalDateTime createdAt;
 

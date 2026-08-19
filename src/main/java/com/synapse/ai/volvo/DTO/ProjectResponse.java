@@ -37,6 +37,10 @@ public class ProjectResponse {
 
     private Integer marks;
 
+    private String email;
+
+    private String phoneNumber;
+
     private LocalDateTime createdAt;
 
     private LocalDateTime updatedAt;
