@@ -177,7 +177,7 @@ public class ProjectServiceImpl implements ProjectService {
                 .toList();
     }
 
-    @Transactional(readOnly = true)
+    @Transactional
     @Override
     public ProjectResponse CheckProject(CheckProject makes) {
 
