@@ -19,6 +19,8 @@ public class CorsConfig implements WebMvcConfigurer {
                         "http://localhost:3000",
                         "http://localhost:5500",
                         "https://ubiquitous-shortbread-e875ba.netlify.app",
+                        "https://aivolve.skushwaha.in/",
+                        "https://sprint.skushwaha.in/",
                         "http://localhost:5501"
                 )
                 .allowedMethods(
